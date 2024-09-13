@@ -1,14 +1,9 @@
-from typing import Union
+# main.py
 
 from fastapi import FastAPI
 
 app = FastAPI()
 
-
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-@app.get("/youtube")
-def youtube():
-    return {"Youtube: Link"}
+async def root():
+    return {"message": "Hello World"}
